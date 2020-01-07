@@ -2,7 +2,6 @@
   "name": "react-three-fibear",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://thedevelobear.github.io/react-three-fibear/",
   "dependencies": {
     "lodash": "^4.17.15",
     "postprocessing": "^6.9.0",
