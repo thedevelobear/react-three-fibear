@@ -1,8 +1,8 @@
 {
-  "name": "3fiber",
+  "name": "react-three-fibear",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "http://develobear.github.io/develobear",
+  "homepage": "https://thedevelobear.github.io/react-three-fibear/",
   "dependencies": {
     "lodash": "^4.17.15",
     "postprocessing": "^6.9.0",
@@ -17,9 +17,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && mv build docs",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
