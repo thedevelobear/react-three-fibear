@@ -2,6 +2,7 @@
   "name": "3fiber",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://develobear.github.io/develobear",
   "dependencies": {
     "lodash": "^4.17.15",
     "postprocessing": "^6.9.0",
