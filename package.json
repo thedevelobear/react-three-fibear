@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://thedevelobear.github.io/react-three-fibear/",
   "dependencies": {
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "postprocessing": "^6.9.0",
     "prettier": "^1.19.1",
     "react": "^16.9.0",
