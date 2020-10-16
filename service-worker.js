@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-three-fibear/precache-manifest.aa5df303fcfb932d92bf24f995e9eed1.js"
+  "/react-three-fibear/precache-manifest.20915edc7baab34c4deed975c715bc35.js"
 );
 
 self.addEventListener('message', (event) => {
