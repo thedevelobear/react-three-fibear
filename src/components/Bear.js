@@ -8,7 +8,7 @@ import { a, useSpring } from "react-spring/three";
 
 const Bear = props => {
   const group = useRef();
-  const gltf = useLoader(GLTFLoader, "/DevelobearDraco.gltf", loader => {
+  const gltf = useLoader(GLTFLoader, "/react-three-fibear/DevelobearDraco.gltf", loader => {
     const dracoLoader = new DRACOLoader();
     dracoLoader.setDecoderPath("/draco-gltf/");
     loader.setDRACOLoader(dracoLoader);
