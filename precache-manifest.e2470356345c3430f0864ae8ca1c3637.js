@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3d7176f4250d5466cd67bdd1d3d82370",
+    "revision": "e6dfa1c1ef6e5fe29de587a053d6e055",
     "url": "/react-three-fibear/index.html"
   },
   {
