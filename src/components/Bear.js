@@ -15,7 +15,7 @@ const Bear = props => {
       : "/DevelobearDraco.gltf",
     loader => {
       const dracoLoader = new DRACOLoader();
-      dracoLoader.setDecoderPath("/draco-gltf/");
+      dracoLoader.setDecoderPath(process.env.NODE_ENV === "production" ? "/react-three-fibear/draco-gltf/" : "/draco-gltf/");
       loader.setDRACOLoader(dracoLoader);
     }
   );
