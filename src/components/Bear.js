@@ -8,11 +8,17 @@ import { a, useSpring } from "react-spring/three";
 
 const Bear = props => {
   const group = useRef();
-  const gltf = useLoader(GLTFLoader, "/react-three-fibear/DevelobearDraco.gltf", loader => {
-    const dracoLoader = new DRACOLoader();
-    dracoLoader.setDecoderPath("/draco-gltf/");
-    loader.setDRACOLoader(dracoLoader);
-  });
+  const gltf = useLoader(
+    GLTFLoader,
+    process.env.NODE_ENV === "production"
+      ? "/react-three-fibear/DevelobearDraco.gltf"
+      : "/DevelobearDraco.gltf",
+    loader => {
+      const dracoLoader = new DRACOLoader();
+      dracoLoader.setDecoderPath("/draco-gltf/");
+      loader.setDRACOLoader(dracoLoader);
+    }
+  );
   let theta = 0;
   useRender(() => {
     if (group.current) {
