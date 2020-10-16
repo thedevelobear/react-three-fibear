@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useLoader, useRender } from "react-three-fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
@@ -7,6 +7,7 @@ import { useHover } from "react-use-gesture";
 import { a, useSpring } from "react-spring/three";
 
 const Bear = props => {
+  const { onBellyClick } = props;
   const group = useRef();
   const gltf = useLoader(
     GLTFLoader,
@@ -15,7 +16,11 @@ const Bear = props => {
       : "/DevelobearDraco.gltf",
     loader => {
       const dracoLoader = new DRACOLoader();
-      dracoLoader.setDecoderPath(process.env.NODE_ENV === "production" ? "/react-three-fibear/draco-gltf/" : "/draco-gltf/");
+      dracoLoader.setDecoderPath(
+        process.env.NODE_ENV === "production"
+          ? "/react-three-fibear/draco-gltf/"
+          : "/draco-gltf/"
+      );
       loader.setDRACOLoader(dracoLoader);
     }
   );
@@ -40,7 +45,13 @@ const Bear = props => {
   );
 
   return (
-    <a.group ref={group} {...props} {...spring} {...bindHover()}>
+    <a.group
+      ref={group}
+      {...props}
+      {...spring}
+      {...bindHover()}
+      onClick={onBellyClick}
+    >
       <scene name="Scene">
         <object3D name="Spot" position={[0, 0, 0]} />
         <group name="Bear" position={[0, 0, 0]} rotation={[0, 0, 0]}>

@@ -1,10 +1,10 @@
-import React, { useEffect, useMemo, useRef } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useFrame, useThree } from "react-three-fiber";
 import * as THREE from "three";
 import { AdditiveBlendingShader, VolumetricLightShader } from "../shaders";
 import { FXAAShader } from "three/examples/jsm/shaders/FXAAShader";
-import {a, useSpring} from "react-spring/three";
-import {useHover} from "react-use-gesture";
+import { a, useSpring } from "react-spring/three";
+import { useHover } from "react-use-gesture";
 
 const DEFAULT_LAYER = 0;
 const OCCLUSION_LAYER = 1;
@@ -37,11 +37,11 @@ const Effects = () => {
   }));
 
   const bindHover = useHover(
-      ({ hovering }) =>
-          setSpring({ scale: hovering ? [1.25, 1.25, 1.25] : [1, 1, 1] }),
-      {
-        pointerEvents: true
-      }
+    ({ hovering }) =>
+      setSpring({ scale: hovering ? [1.25, 1.25, 1.25] : [1, 1, 1] }),
+    {
+      pointerEvents: true
+    }
   );
 
   return (
