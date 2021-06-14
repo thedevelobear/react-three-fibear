@@ -14,7 +14,7 @@
     "react-spring": "^8.0.27",
     "react-three-fiber": "^3.0.13",
     "react-use-gesture": "^6.0.14",
-    "three": "^0.108.0"
+    "three": "^0.125.0"
   },
   "scripts": {
     "start": "react-scripts start",
